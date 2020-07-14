@@ -46,6 +46,10 @@
 
 #include <unsupported/Eigen/NonLinearOptimization>
 
+// For N1SDP threads setting MACRO
+#define omp_get_max_threads()   4
+#define omp_get_thread_num()    4
+
 namespace ndt_omp
 {
 enum NeighborSearchMethod { KDTREE, DIRECT26, DIRECT7, DIRECT1 };

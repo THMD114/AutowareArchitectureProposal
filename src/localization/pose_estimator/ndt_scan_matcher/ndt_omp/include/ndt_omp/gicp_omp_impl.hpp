@@ -45,6 +45,10 @@
 #include <atomic>
 #include <chrono>
 
+// For N1SDP threads setting MACRO
+#define omp_get_max_threads()	4
+#define omp_get_thread_num()	4
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 template <typename PointSource, typename PointTarget>
 void ndt_omp::GeneralizedIterativeClosestPoint<PointSource, PointTarget>::setInputCloud(
